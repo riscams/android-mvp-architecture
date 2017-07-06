@@ -79,8 +79,6 @@ dependencies {
     // dependency injection
     compile "com.google.dagger:dagger:$rootProject.dagger2Version"
     annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
-    provided 'javax.annotation:jsr250-api:1.0'
-    compile 'javax.inject:javax.inject:1'
 
     // reactive
     compile "io.reactivex.rxjava2:rxjava:$rootProject.rxjava2Version"
@@ -106,6 +104,10 @@ dependencies {
     androidTestCompile "com.android.support.test.espresso:espresso-intents:$rootProject.espressoVersion"
     androidTestCompile "org.mockito:mockito-core:$rootProject.mockitoVersion"
     androidTestAnnotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+    compile 'javax.inject:javax.inject:1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    provided 'javax.annotation:jsr250-api:1.0'
 }
 
 configurations.all {

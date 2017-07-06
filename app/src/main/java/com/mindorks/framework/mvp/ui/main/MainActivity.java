@@ -44,6 +44,7 @@ import com.mindorks.framework.mvp.ui.about.AboutFragment;
 import com.mindorks.framework.mvp.ui.base.BaseActivity;
 import com.mindorks.framework.mvp.ui.custom.RoundedImageView;
 import com.mindorks.framework.mvp.ui.feed.FeedActivity;
+import com.mindorks.framework.mvp.ui.inventaris.InventarisActivity;
 import com.mindorks.framework.mvp.ui.login.LoginActivity;
 import com.mindorks.framework.mvp.ui.main.rating.RateUsDialog;
 import com.mindorks.framework.mvp.utils.ScreenUtils;
@@ -332,6 +333,10 @@ public class MainActivity extends BaseActivity implements MainMvpView {
                             case R.id.nav_item_logout:
                                 mPresenter.onDrawerOptionLogoutClick();
                                 return true;
+                            //di sini ditambahin R.id.nav_item_inventaris
+                            case R.id.nav_item_inventaris:
+                                mPresenter.onDrawerInventarisClick();
+                                return true;
                             default:
                                 return false;
                         }
@@ -360,5 +365,9 @@ public class MainActivity extends BaseActivity implements MainMvpView {
         if (mDrawer != null) {
             mDrawer.closeDrawer(Gravity.START);
         }
+    }
+
+    @Override
+  public void openInventaris() { startActivity(InventarisActivity.getStartIntent(this));
     }
 }

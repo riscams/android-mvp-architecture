@@ -163,4 +163,10 @@ public class MainPresenter<V extends MainMvpView> extends BasePresenter<V>
         getMvpView().closeNavigationDrawer();
         getMvpView().openMyFeedActivity();
     }
+
+    @Override
+    public void onDrawerInventarisClick(){
+        getMvpView().closeNavigationDrawer();
+        getMvpView().openInventaris();
+    }
 }

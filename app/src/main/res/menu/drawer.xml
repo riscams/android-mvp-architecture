@@ -13,8 +13,9 @@
   ~ limitations under the License
   -->
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <group>
         <item
             android:id="@+id/nav_item_about"
             android:checked="true"
@@ -35,5 +36,9 @@
             android:checked="true"
             android:icon="@drawable/ic_power_settings_new_24px"
             android:title="@string/logout" />
+        <item
+            android:id="@+id/nav_item_inventaris"
+            android:checked="true"
+            android:title="Inventaris" />
     </group>
 </menu>

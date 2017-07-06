@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+
+  <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    style="@style/Toolbar"
+    android:layout_height="50dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:background="?attr/colorPrimary"
+    android:minHeight="65dp"
+    android:theme="?attr/actionBarTheme"
+    app:title="Input Inventaris"
+    app:titleTextAppearance="@style/Toolbar.TitleText"
+    app:titleTextColor="@color/white" />
+
+  <TextView
+    android:id="@+id/id_tag"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_below="@+id/toolbar"
+    android:layout_margin="20dp"
+    android:text="ID Tag"
+    android:textSize="14sp" />
+
+  <TextView
+    android:id="@+id/textView4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/id_tag"
+    android:layout_alignStart="@+id/id_tag"
+    android:layout_below="@+id/edit_id"
+    android:layout_marginTop="17dp"
+    android:text="Tipe Aset"
+    android:textSize="14sp" />
+
+  <EditText
+    android:id="@+id/edit_id"
+    android:layout_width="175dp"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/btn_save"
+    android:layout_alignStart="@+id/btn_save"
+    android:layout_below="@+id/edit_id_tag"
+    android:ems="10"
+    android:focusable="false"
+    android:hint="ID"
+    android:inputType="textPersonName"
+    android:textColorLink="@color/blue_grey_light"
+    android:textSize="14sp" />
+
+  <Spinner
+    android:id="@+id/spinner1"
+    android:entries="@array/asset_origin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/textView4"
+    android:layout_alignBottom="@+id/textView4"
+    android:layout_alignLeft="@+id/edit_id"
+    android:layout_alignStart="@+id/edit_id"
+    android:layout_alignRight="@+id/edit_id"
+    android:layout_alignEnd="@+id/edit_id" />
+
+  <TextView
+    android:id="@+id/textView5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignEnd="@+id/id_tag"
+    android:layout_alignRight="@+id/id_tag"
+    android:layout_alignTop="@+id/spinner4"
+    android:text="Tahun"
+    android:textSize="14sp" />
+
+  <Spinner
+    android:id="@+id/spinner2"
+    android:entries="@array/lokasi"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:layout_below="@+id/spinner5"
+    android:layout_alignLeft="@+id/spinner5"
+    android:layout_alignStart="@+id/spinner5"
+    android:layout_alignRight="@+id/spinner5"
+    android:layout_alignEnd="@+id/spinner5" />
+
+  <Spinner
+    android:id="@+id/spinner3"
+    android:entries="@array/tipe_asset"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/spinner1"
+    android:layout_alignLeft="@+id/spinner1"
+    android:layout_alignStart="@+id/spinner1"
+    android:layout_marginTop="16dp"
+    android:layout_alignRight="@+id/spinner1"
+    android:layout_alignEnd="@+id/spinner1" />
+
+  <Button
+    android:id="@+id/btn_save"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="SAVE"
+    android:layout_below="@+id/spinner2"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="34dp" />
+
+  <Spinner
+    android:id="@+id/spinner4"
+    android:entries="@array/tahun"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/edit_nama_aset"
+    android:layout_marginTop="20dp"
+    android:layout_alignLeft="@+id/edit_nama_aset"
+    android:layout_alignStart="@+id/edit_nama_aset"
+    android:layout_alignRight="@+id/edit_nama_aset"
+    android:layout_alignEnd="@+id/edit_nama_aset" />
+
+  <Spinner
+    android:id="@+id/spinner5"
+    android:entries="@array/lantai"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/edit_nama_gedung"
+    android:layout_alignLeft="@+id/edit_nama_gedung"
+    android:layout_alignStart="@+id/edit_nama_gedung"
+    android:layout_marginTop="12dp"
+    android:layout_alignRight="@+id/edit_nama_gedung"
+    android:layout_alignEnd="@+id/edit_nama_gedung" />
+
+  <EditText
+    android:id="@+id/edit_kategori"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignEnd="@+id/spinner3"
+    android:layout_alignLeft="@+id/spinner3"
+    android:layout_alignRight="@+id/spinner3"
+    android:layout_alignStart="@+id/spinner3"
+    android:layout_below="@+id/spinner3"
+    android:layout_marginTop="10dp"
+    android:ems="12"
+    android:hint="Masukkan Kategori"
+    android:inputType="textPersonName"
+    android:textSize="14sp" />
+
+
+  <EditText
+    android:id="@+id/edit_nama_aset"
+    android:layout_width="175dp"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/edit_kategori"
+    android:layout_alignStart="@+id/edit_kategori"
+    android:layout_below="@+id/edit_kategori"
+    android:ems="10"
+    android:hint="Masukkan Nama Aset"
+    android:inputType="textPersonName"
+    android:textSize="14sp" />
+
+  <EditText
+    android:id="@+id/edit_id_tag"
+    android:layout_width="175dp"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/id_tag"
+    android:layout_alignBottom="@+id/id_tag"
+    android:layout_alignLeft="@+id/edit_id"
+    android:layout_alignStart="@+id/edit_id"
+    android:ems="10"
+    android:focusable="false"
+    android:hint="ID Tag"
+    android:inputType="textPersonName"
+    android:textColorLink="@color/blue_grey_light"
+    android:textSize="14sp" />
+
+  <TextView
+    android:id="@+id/id"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/edit_id"
+    android:layout_alignBottom="@+id/edit_id"
+    android:layout_alignLeft="@+id/textView4"
+    android:layout_alignStart="@+id/textView4"
+    android:text="ID"
+    android:textSize="14sp" />
+
+
+  <EditText
+    android:id="@+id/edit_nama_gedung"
+    android:layout_width="175dp"
+    android:layout_height="wrap_content"
+    android:layout_alignLeft="@+id/spinner4"
+    android:layout_alignStart="@+id/spinner4"
+    android:layout_below="@+id/spinner4"
+    android:layout_marginTop="10dp"
+    android:ems="10"
+    android:hint="Masukkan Nama Gedung"
+    android:inputType="textPersonName"
+    android:textSize="14sp" />
+
+  <TextView
+    android:id="@+id/textView3"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBaseline="@+id/edit_nama_gedung"
+    android:layout_alignBottom="@+id/edit_nama_gedung"
+    android:layout_alignLeft="@+id/textView5"
+    android:layout_alignStart="@+id/textView5"
+    android:text="Lokasi"
+    android:textSize="14sp" />
+
+</RelativeLayout>
